@@ -1,0 +1,9 @@
+<ul *ngIf="isSmallScreen">
+  <ng-container *ngFor="let group of groups">
+    <li *ngFor="let item of group">
+      <button mat-button [routerLink]="item.route">
+        {{ item.displayname }}
+      </button>
+    </li>
+  </ng-container>
+</ul>

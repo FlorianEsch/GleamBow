@@ -1,0 +1,23 @@
+
+
+
+<div class="headercontentbox"  mat-app-background>
+  <div class="contentBox">
+    <div #placeholderDiv class="placeholderTop"></div>
+    <app-main-content-page></app-main-content-page>
+  </div>
+<div class="box">
+
+
+
+
+  <div #HeaderRef class="helperdivHeader">
+    <app-header class="header-style" (toggleSidenav)="handleToggleSidenav()"></app-header>
+  </div>
+  <app-sidebar *ngIf="isSidebarVisible"></app-sidebar>
+</div>
+</div>
+
+
+
+<app-footer class="footer-style"></app-footer>
