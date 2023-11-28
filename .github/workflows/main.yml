@@ -31,5 +31,5 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        branch: gh-pages  # Der Branch, auf den deployt wird
-        folder: WEBPage/Frontend/dist  # Der Ordner, der deployt wird
+        branch: gh-pages
+        folder: WEBPage/Frontend/dist
