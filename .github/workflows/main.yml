@@ -19,8 +19,8 @@ jobs:
 
     # Install Dependencies
     - name: Install Dependencies
-      run: npm install
-      working-directory: WEBPage/Frontend/
+      run: npm ci
+      working-directory: Frontend/
 
     # Build
     - name: Build
