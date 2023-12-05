@@ -31,7 +31,7 @@ export class MainContentPageComponent implements OnInit {
   }
 
   private updateLogoContainer(isSmallScreen: boolean): void {
-    const heightValue = isSmallScreen ? '150%' : '80%';
+    const heightValue = isSmallScreen ? '20%' : '50%';
     document.documentElement.style.setProperty('--logo-container-width', heightValue);
   }
   

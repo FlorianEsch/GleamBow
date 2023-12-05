@@ -1,13 +1,49 @@
 .logo-container {
   position: absolute; /* or 'fixed' if you want it to stay in place on scroll */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: var(--logo-container-width, 50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   perspective: 1200px;
   transition: width 0.5s ease;
+  align-items: center;
 }
 
 #logo {
   filter: drop-shadow(7px 7px 7px rgba(228, 223, 223, 0.5));
+  height: var(--logo-container-width);
+}
+
+.mask {
+  position: fixed;
+  top: -60;
+  left: 50%;
+  width: 140%;
+  height: var(--before-element-height, 100%);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) -10px, rgba(0, 0, 0, 0) 70%);
+  transform: scaleY(2.1) translateX(-50%) rotateX(45deg);
+  transform-origin: 50% 0%;
+  transition: height 0.5s ease;
+}
+
+.half-circle-container {
+  position: absolute;
+  top: 0; // Positioniert den Halbkreis oben
+  left: 0;
+  width: 100%; // Breite des Containers
+  height: 80%; // Höhe des Containers
+  overflow: hidden; // Versteckt alles, was über den Container hinausgeht
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0; // Positioniert den Halbkreis am unteren Rand des Containers
+    left: -20%;
+    width: 140%; // Durchmesser des Halbkreises
+    height: 100%; // Höhe des Halbkreises
+    background: grey; // Farbe des Halbkreises
+    border-bottom-left-radius: 50%; // Radius für den Halbkreis
+    border-bottom-right-radius: 50%;
+  }
 }
